@@ -1,6 +1,6 @@
 {
 	  "name": "sale-me",
-	  "main": "server.js",
+	  "main": "app.js",
 	  "dependencies": {
 	    "express" : "~4.5.1",
 		"mongoose" : "~3.8.0",

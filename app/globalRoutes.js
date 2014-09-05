@@ -20,10 +20,6 @@ module.exports = function(app) {
         res.send(req.user);
     });
 
-    //app.get('/auth/facebook/callback', 
-	//	  passport.authenticate('facebook', { successRedirect: '/success',
-	//		                                  failureRedirect: '/error' }));
-    
     app.get('/success', function(req, res){
 	   res.send("success logged in");
     });
