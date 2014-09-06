@@ -64,8 +64,7 @@ passport.deserializeUser(function(id, done) {
   });
 });
 
-
-
+ 
 // routes ==================================================
 require('./app/postsRoutes')(app); // configure our routes
 require('./app/usersRoutes')(app); // configure our routes

@@ -6,26 +6,20 @@ module.exports = function(app) {
     
     
     app.get('/home', function(req, res) {
-                res.sendfile('./public/views/index.html'); // load our public/index.html file
+          res.sendfile('./public/views/index.html'); // load our public/index.html file
     });
     
     
     app.post('/auth/google/callback', passport.authenticate('google'), function (req, res) {
         // Return user back to client
         res.send(req.user);
+        
+        
     });
     
    app.get('/auth/facebook/callback', passport.authenticate('facebook'), function (req, res) {
         // Return user back to client
         res.send(req.user);
-    });
-
-    app.get('/success', function(req, res){
-	   res.send("success logged in");
-    });
-
-    app.get('/error', function(req, res){
-        res.send("error logged in");
     });
     
     
