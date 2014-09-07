@@ -1,4 +1,5 @@
 var passport = require('passport');
+var UserMgr = require('./userMgr');
 
 module.exports = function(app) {
     
@@ -18,8 +19,19 @@ module.exports = function(app) {
     });
     
    app.get('/auth/facebook/callback', passport.authenticate('facebook'), function (req, res) {
-        // Return user back to client
-        res.send(req.user);
+	   
+	   var user = {};
+	   UserMgr.getFacebookByID(req.user.id,function(data){
+		   user = data;
+		   if(user == null)
+		   {
+			   UserMgr.addFacebook(req.user.id,req.user.displayName,function(data){
+				   var addedUser = data;
+				   // Return user back to client
+				   res.sendfile('./public/views/index.html');
+			   });	
+		   }
+       });
     });
     
     

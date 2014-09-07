@@ -1,3 +1,4 @@
+var UserMgr = require('./userMgr');
 var domains = require('./domains');
 
 module.exports = function(app)

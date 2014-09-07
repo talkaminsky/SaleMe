@@ -7,10 +7,10 @@ var bcrypt   = require('bcrypt-nodejs');
 // define the schema for our user model
 var userSchema = mongoose.Schema({
      _id :{type: ObjectIdSchema, default: function(){ return new ObjectId(); }},
-    fullName : String,
     local            : {
         email        : String,
         password     : String,
+        name         : String,
     },
     facebook         : {
         id           : String,
@@ -23,8 +23,8 @@ var userSchema = mongoose.Schema({
         token        : String,
         email        : String,
         name         : String
-    }
-
+    },
+    creationDate : { type: Date, default: Date.now },
 });
 
 // checking if password is valid using bcrypt

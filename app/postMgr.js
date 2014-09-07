@@ -8,7 +8,6 @@ var add = function(post) {
        if (err) return console.error(err);
                 console.dir(newPost);
    });
-
 };
 
 var get = function(callback) {
