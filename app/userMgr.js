@@ -7,7 +7,7 @@ var addLocal = function(email,name,password) {
 	   var userToSave = { 
 			   name: name,
 			   password: password,
-			   email : email,
+			   email : email
 	   };
 	   var newUsert=  new User(userToSave);
 	   newUsert.save(function(err, newUsert) {
@@ -34,7 +34,7 @@ var addGoogle = function(email,name,password) {
 			   var userToSave = { 
 					   name: name,
 					   password: password,
-					   email : email,
+					   email : email
 			   };
 			   var newUsert=  new User(userToSave);
 			   newUsert.save(function(err, newUsert) {
@@ -72,7 +72,6 @@ var getFacebookByID = function(id,callback) {
 		  callback(user);
 		})
 };
-
 
 module.exports.getFacebookByID = getFacebookByID;
 module.exports.addFacebook = addFacebook;

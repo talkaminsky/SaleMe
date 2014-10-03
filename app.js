@@ -10,7 +10,6 @@ var passport = require('passport');
 var GooglePlusStrategy = require('passport-google-plus');
 var FacebookStrategy = require('passport-facebook').Strategy;
 
-
 // configuration ===========================================
 	
 // config files
@@ -37,7 +36,6 @@ passport.use(new GooglePlusStrategy({
     done(null, profile, tokens); 
 }
 ));
-
 
 passport.use(new FacebookStrategy({
         clientID: '1494546327459615',
