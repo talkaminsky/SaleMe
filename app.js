@@ -50,8 +50,6 @@ passport.use(new FacebookStrategy({
     }
 ));
 
-
-
 passport.serializeUser(function(user, done) {
   done(null, user.id);
 });
@@ -62,7 +60,6 @@ passport.deserializeUser(function(id, done) {
   });
 });
 
- 
 // routes ==================================================
 require('./app/postsRoutes')(app); // configure our routes
 require('./app/usersRoutes')(app); // configure our routes

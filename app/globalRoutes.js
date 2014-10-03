@@ -2,10 +2,10 @@ var passport = require('passport');
 var UserMgr = require('./userMgr');
 
 module.exports = function(app) {
-    
-    app.get('/auth/facebook', passport.authenticate('facebook'));
-    
-    
+
+    app.get('/auth/facebook', passport.authenticate('facebook'), function(req, res){
+        });
+
     app.get('/home', function(req, res) {
           res.sendfile('./public/views/index.html'); // load our public/index.html file
     });
@@ -17,7 +17,6 @@ module.exports = function(app) {
     });
     
    app.get('/auth/facebook/callback', passport.authenticate('facebook'), function (req, res) {
-	   
 	   var user = {};
 	   UserMgr.getFacebookByID(req.user.id,function(data){
 		   user = data;
