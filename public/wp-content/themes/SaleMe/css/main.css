@@ -3,9 +3,25 @@
 }
 
 html,body {
-    font-family:"Tahoma",Geneva,sans-serif;
+    font-family:'felix007Medium',Geneva,sans-serif;
     min-height:100%;
     position:relative
+}
+
+.felix007Medium {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'felix007Medium', sans-serif;
+    font-size-adjust: 0.45;
+}
+
+@font-face {
+    font-family: 'felix007Medium';
+    src: url('../../../../fonts/felix007-medium-webfont.eot');
+    src: url('../../../../fonts/felix007-medium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../../../fonts/felix007-medium-webfont.woff') format('woff'),
+    url('../../../../fonts/felix007-medium-webfont.ttf') format('truetype'),
+    url('../../../../fonts/felix007-medium-webfont.svg#webfont') format('svg');
 }
 
 html {
@@ -18,7 +34,7 @@ html.fullwidth,.fullwidth body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family:"Tahoma",Geneva,sans-serif
+    font-family:'felix007Medium',Geneva,sans-serif;
 }
 
 #main_wrapper {
@@ -111,7 +127,7 @@ iframe {
 }
 
 span {
-    font-size:14px
+    font-size:22px
 }
 
 .centered {
@@ -453,6 +469,30 @@ td.avatar .avatar,.logged-info {
     display:none
 }
 
+.search-bar
+{
+    font-family:'felix007Medium',Geneva,sans-serif;;
+    text-align: right;
+    width: 30%;
+    padding-top: 10px;
+    font-weight: bold;font-style: normal;
+    font-size: 18px !important;
+    color:#0088cc;
+    border-radius: 10px
+}
+
+.search-btn
+{
+    color: #0088cc;
+    font-size: 22px;
+
+}
+
+.search-btn:hover
+{
+    cursor:pointer
+}
+
 .navbar .nav li:hover {
     background:transparent
 }
@@ -460,10 +500,10 @@ td.avatar .avatar,.logged-info {
 .navbar-inverse .nav>li>a,.header_buttons a {
     padding:0 12px;
     display:block;
-    font-size:12px;
+    font-size:22px;
     text-transform:uppercase;
     font-weight:700;
-    font-family:"Tahoma",Geneva,sans-serif;
+    font-family:'felix007Medium',Geneva,sans-serif;;
     overflow:hidden;
     -webkit-transition:linear .3s;
     -moz-transition:linear .3s;
@@ -2788,7 +2828,7 @@ body.customize-support .navbar-fixed-top {
 
 .post-review ul li {
     padding:15px 25px;
-    font-family:"Tahoma",Geneva,sans-serif;
+    font-family:'felix007Medium',Geneva,sans-serif;
     text-transform:uppercase;
     color:#333;
     border-bottom-color:#e9e9e9;
@@ -3723,7 +3763,8 @@ fieldset.sub-bar button[value="pending"] {
     background:#1f282d;
     border-radius:5px;
     color:#fff;
-    padding:1px
+    padding:1px;
+
 }
 
 .edit-delete {
@@ -3881,7 +3922,7 @@ fieldset.sub-bar button[value="pending"] {
 }
 
 .pb-container.completed .pb-summary,.pb-container.completed .progress-striped .bar {
-    background-color:#76cc1e
+    background-color:#0088cc
 }
 
 .pb-container.expired .pb-summary,.pb-container.expired .progress-striped .bar {
@@ -3901,12 +3942,36 @@ fieldset.sub-bar button[value="pending"] {
     padding:5px 10px;
     z-index:999;
     color:#fff;
-    text-transform:capitalize
+    text-transform:capitalize;
+    border-radius:5px;
 }
 
-.pb-image,.pb-title {
+.pb-image {
+    padding: 10px;
+    position: relative;
+}
+
+.pb-title {
     padding:7px;
-    position:relative
+    position:relative;
+    padding-top: 15px;
+    font-family:'felix007Medium',Geneva,sans-serif;
+}
+
+
+.pb-inner-img
+{
+    padding-right:7px;
+    position:relative;
+    border-radius: 20px;
+}
+
+.circular {
+    width: 280px;
+    height: 280px;
+    border-radius: 140px;
+    -webkit-border-radius: 140px;
+    -moz-border-radius: 140px;
 }
 
 .pbimage,.pb-image a img,.pb-image img:first-child {
@@ -3940,7 +4005,7 @@ fieldset.sub-bar button[value="pending"] {
 
 .pbuser {
     position:absolute;
-    bottom:-10px;
+    bottom:220px;
     left:41%;
     border:3px solid #fff;
     box-shadow:0 1px 3px 0 rgba(0,0,0,0.5);
@@ -3949,7 +4014,8 @@ fieldset.sub-bar button[value="pending"] {
 }
 
 .pb-content {
-    padding:10px 20px 20px;
+    padding-left:20px;
+    padding-right: 20px;
     color:#666;
     height:60px;
     direction:rtl;
@@ -3958,7 +4024,8 @@ fieldset.sub-bar button[value="pending"] {
 
 .pb-content p,.pb-content span {
     color:#333;
-    font-size:12px
+    font-size:14px;
+    font-family:'felix007Medium',Geneva,sans-serif;
 }
 
 .pb-bar {
@@ -3967,7 +4034,8 @@ fieldset.sub-bar button[value="pending"] {
 
 .pb-summary {
     padding:15px 20px 10px 25px;
-    border-radius:0 0 5px 5px
+    border-radius:0 0 5px 5px;
+    height: 20px;
 }
 
 .pb-summary h4 {
@@ -3978,6 +4046,12 @@ fieldset.sub-bar button[value="pending"] {
 .pb-summary h4 span {
     text-transform:uppercase;
     font-size:12px
+}
+
+.pb-comment-like {
+   font-family:'felix007Medium',Geneva,sans-serif;
+    font-size: 20px;
+    color: #191919;
 }
 
 .pb-left {
@@ -4012,11 +4086,51 @@ fieldset.sub-bar button[value="pending"] {
     float:left
 }
 
+.title-panel
+{
+    height: 50px;
+    background-color: #444444;
+    text-align: center;
+    border-radius: 7px;
+    width: 85%;
+    font-family:'felix007Medium',Geneva,sans-serif;
+    font-size: 24px;
+    margin-top: 2%;
+    color: #0088cc;;
+}
+
+.search-panel
+{
+    background-color: transparent;
+    text-align: center;
+    width: 85%;
+    font-family:'felix007Medium',Geneva,sans-serif;
+    font-size: 24px;
+    margin-top: 2%;
+    color: #0088cc;
+
+}
+
+.combobox
+{
+    text-align: center;
+    border-radius: 5px;
+    font-family:'felix007Medium',Geneva,sans-serif;
+    font-size: 20px;
+    text-align: right;
+    float: right;
+    direction: rtl;
+    margin-right: 1%;
+    width: 233px;
+}
+
 .project-card {
-    width:300px;
-    margin-left:15px!important;
-    margin-right:20px;
-    margin-bottom: 15px;
+    width:280px;
+    margin-left:10px!important;
+    margin-right:10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
 }
 
 .image_carousel {
@@ -4449,9 +4563,9 @@ div.comment-form {
     margin-top:26px;
     padding-left:10px;
     display:none;
-    font-size:15px;
+    font-size:30px;
     font-weight:700;
-    font-family:"Tahoma",Geneva,sans-serif;
+    font-family:'felix007Medium',Geneva,sans-serif;
     -webkit-transition:linear .3s;
     -moz-transition:linear .3s;
     -ms-transition:linear .3s;
