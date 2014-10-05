@@ -5,19 +5,16 @@
         <div class="well well-sm">
           <center>
           <fieldset>
-            <legend class="text-center header">מודעה חדשה</legend>
-              <div class="col-md-12">
-                <input id="fname" name="post.user" ng-model="post.user" type="text" placeholder="משתמש" class="form-control">
-              </div>
+            <legend class="text-center header" style="font-family:'felix007Medium',Geneva,sans-serif;font-size: 25px">מודעה חדשה</legend>
               <div class="col-md-12">
                 <input id="lname" name="post.title" ng-model="post.title" type="text" placeholder="כותרת" class="form-control">
               </div>
     
               <div class="col-md-12">
-                <textarea class="form-control"  name="post.content" ng-model="post.content" name="message" placeholder="תוכן הודעה" rows="7"></textarea>
+                <textarea class="form-control-small"  rows="10" name="post.content" ng-model="post.content" name="message" placeholder="תוכן הודעה"></textarea>
               </div>
               <div class="col-md-12 text-center">
-                <button ng-click="save()" class="btn btn-primary btn-lg">שלח</button>
+                <button ng-click="save()" style="width: 100px;background-color:#0088cc;font-family: font-family:'felix007Medium',Geneva,sans-serif;">שלח</button>
               </div>
           </fieldset>
          </center>
