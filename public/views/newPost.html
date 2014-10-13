@@ -1,22 +1,41 @@
-<section id="newPost" class="container" ng-controller="NewPostCtrl">
-  <div class="container">
+<section id="newPost" ng-controller="NewPostCtrl">
+  <div class="tal-container" >
 	<div class="row">
       <div class="col-md-12">
         <div class="well well-sm">
           <center>
-          <fieldset>
-            <legend class="text-center header" style="font-family:'felix007Medium',Geneva,sans-serif;font-size: 25px">מודעה חדשה</legend>
-              <div class="col-md-12">
-                <input id="lname" name="post.title" ng-model="post.title" type="text" placeholder="כותרת" class="form-control">
-              </div>
-    
-              <div class="col-md-12">
-                <textarea class="form-control-small"  rows="10" name="post.content" ng-model="post.content" name="message" placeholder="תוכן הודעה"></textarea>
-              </div>
-              <div class="col-md-12 text-center">
-                <button ng-click="save()" style="width: 100px;background-color:#0088cc;font-family: font-family:'felix007Medium',Geneva,sans-serif;">שלח</button>
-              </div>
-          </fieldset>
+          <form id="foo" ng-upload="bar(content)" method="POST" action="/upload" name="foo">
+              <fieldset>
+                <legend class="text-center header" style="color :#444444;font-family:'felix007Medium',Geneva,sans-serif;font-size: 25px">מודעה חדשה</legend>
+                  <div class="col-md-12">
+                      <textarea rows="1"  id="lname" name="post.title" ng-model="post.title" type="text" placeholder="המודעה" class="form-control"></textarea>
+                  </div>
+
+                  <div class="col-md-12">
+                      <textarea rows="4"  id="lcontent" name="post.content" ng-model="post.content" type="text" placeholder="המודעה" class="form-control"></textarea>
+                  </div>
+
+                  <div class="col-md-12">
+                      <input type="number" class="form-control-number" style="font-size: 22px;height: 30px" min="0" max="9999999" id="lcontent" name="post.price" ng-model="post.price" type="text" placeholder="מחיר"  >
+                  </div>
+
+                  <div class="col-md-12">
+                      <input type="file" name="file" id="files" class="hidden" />
+                      <label for="files" style="float: right;font-size: x-large;width: 100%">הוסף תמונות...</label>
+                  </div>
+
+                    <br><br>
+                  <div class="col-md-12" style=" border: 1px solid;border-color: #444444; border-radius: 5px;min-height: 50px;width: 74%">
+                      <img class="tal-img" src="../images/bad1.jpg" style="padding: 5px" alt="תמונה 1"  >
+                      <img class="tal-img" src="../images/bad1.jpg" style="padding: 5px" alt="תמונה 1"  >
+                      <img class="tal-img" src="../images/bad1.jpg" style="padding: 5px" alt="תמונה 1"  >
+                  </div>
+                  <br>
+                  <div class="col-md-12 text-center">
+                     <input type="submit" class="tal-btn" value="פרסם" ng-disabled="$isUploading"><br>
+                  </div>
+              </fieldset>
+          </form>
          </center>
         </div>
       </div>

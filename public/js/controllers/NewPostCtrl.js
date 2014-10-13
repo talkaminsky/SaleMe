@@ -1,4 +1,4 @@
-saleMe.controller('NewPostCtrl', function($scope, $location,  SaleMeFactory) {
+saleMe.controller('NewPostCtrl', function($scope , $location, SaleMeFactory) {
 
     $scope.post = { user : "", title : "", content :"" };
 
@@ -15,4 +15,11 @@ saleMe.controller('NewPostCtrl', function($scope, $location,  SaleMeFactory) {
                 $scope.status = 'Unable to save data: ' + error.message;
             });
     };
+
+    $scope.foo = "Hello World";
+    $scope.disabled = false;
+    $scope.bar = function(content) {
+        if (console) console.log(content);
+        $scope.uploadResponse = content.msg;
+    }
 });

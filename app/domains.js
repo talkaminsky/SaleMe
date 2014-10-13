@@ -7,11 +7,6 @@ var bcrypt   = require('bcrypt-nodejs');
 // define the schema for our user model
 var userSchema = mongoose.Schema({
      _id :{type: ObjectIdSchema, default: function(){ return new ObjectId(); }},
-    local            : {
-        email        : String,
-        password     : String,
-        name         : String
-    },
     facebook         : {
         id           : String,
         token        : String,
@@ -69,6 +64,7 @@ var PostSchema   = new Schema({
     updateDate :  { type: Date, default: Date.now },
     likes : [String],
     views :  Number,
+    price : Number,
     comments : [CommentSchema]
 });
 
